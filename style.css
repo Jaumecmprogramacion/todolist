@@ -57,6 +57,7 @@ body{
     align-items: center; /* para que los elementos se centren */
     padding: 10px; /* separar de los bordes */
     gap: 70px; /* separar del imputr y icono */
+    margin: 40px 0;
 
 
 }
@@ -89,18 +90,18 @@ body{
 
 .seccion-tarea h3 {
     color: var(--blue-dark) ;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /*separar las letras de abajo*/
 }
 
-.seccion-tarea li {
-    display: flex;
+.seccion-tarea li { 
+    display: flex; /*para acomodar los elementos*/
     align-items: center;
     justify-content: space-between;
     background: linear-gradient(to bottom,var(--blue-dark),var(--green));
     border-radius: 15px;
     padding: 10px;
     color: var(--white);
-    margin: 5px 0;
+    margin: 5px 0; /* para separar los elementos que se van creando */
 
 }
 .seccion-tarea i {
@@ -119,7 +120,7 @@ body{
 }
 
 .line-through{
-    text-decoration: line-through;
+    text-decoration: line-through; /*para que se subraye al eliminar */
     color : var(--blue-light);
 } 
 
