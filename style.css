@@ -1,0 +1,127 @@
+*{
+    /* el navegador trae por defecto un estilo que nos afecta, con esto lo normalizamos */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+:root{
+    --white: #fafafb;
+    --amarillo:#FDD685;
+    --verdoso-light:#A3E2CF;
+    --blue-dark:#2a73c2;
+    --green: #2c7b90;
+
+}
+
+body{
+    background: linear-gradient(to bottom,var(--amarillo),var(--verdoso-light)); /* degradado desde el var(color1) al var (color2)*/
+
+    height: 100vh; /* ocupa toda la pantalla */
+    font-family: 'Prompt', sans-serif;
+
+}
+/* contenedor donde van todos los divs */
+.container {
+    max-width: 80%;
+    width: 400px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+/* Usuario*/
+.usuario h1{
+    color:var(--blue-dark);
+
+
+}
+.usuario span{
+    color:var(--blue-dark);
+    letter-spacing: 1px ; /* separar las letras */
+
+}
+
+#fecha {
+    color:var(--blue-dark);
+    padding: 50px 0 5px 0; /* separar de arriba */
+}
+/* agregar tarea */
+.agregar-tarea{
+    background-color: var(--white);
+    border-radius: 15px; /* redondeamos las esquinas */
+    height: 70px; /* tamaño */
+    display: flex; /* para que los elementos se acomoden */
+    align-items: center; /* para que los elementos se centren */
+    padding: 10px; /* separar de los bordes */
+    gap: 70px; /* separar del imputr y icono */
+
+
+}
+.agregar-tarea input{
+    width: 100%; /* ocupe todo el ancho y largo */
+    height: 100%; /* ocupe todo el ancho y largo */
+    border-radius: 8px;
+    border: none;
+    background-color: var(--white);
+
+
+}
+
+.agregar-tarea i{
+    font-size: 50px; /* así ponemos el tamaño, como usamos iconos no podempos usar width,  */
+    color: var(--amarillo);
+
+}
+.agregar-tarea i:hover{
+    transform: scale(1.1);  /*cada vez que pasemos por encima del elemento aumenta 1.1  */
+    cursor: pointer;  /*cada vez que pasemos por encima del elemento cambia a la mano  */
+
+}
+.agregar-tarea input::placeholder{
+    font-size: 1.1rem;
+    color:var(--green)
+   
+}
+/* seccion tarea */
+
+.seccion-tarea h3 {
+    color: var(--blue-dark) ;
+    margin-bottom: 20px;
+}
+
+.seccion-tarea li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to bottom,var(--blue-dark),var(--green));
+    border-radius: 15px;
+    padding: 10px;
+    color: var(--white);
+    margin: 5px 0;
+
+}
+.seccion-tarea i {
+    font-size: 25px;
+}
+
+.seccion-tarea > ul p {
+    font-size: 1.2rem;
+
+}
+
+
+.seccion-tarea i:hover {
+    color: var(--blue-light);
+    cursor: pointer;
+}
+
+.line-through{
+    text-decoration: line-through;
+    color : var(--blue-light);
+} 
+
+
+
