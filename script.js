@@ -9,11 +9,11 @@ const lineThrough = 'line-through';
 let id = 0; // Variable para generar IDs únicos
 let LIST = []; // Lista de tareas
 
-// Cargar datos del LocalStorage. Parse transforma el json al lenguaje que estamos usando, deshace el stringify
+// Cargar datos del LocalStorage. Parse transforma el json al lenguaje que estamos usando, deshace el stringify. Aqui lo que hacemos es que al entrar en el navegador, carga los datos si los tenemos guardados
 const data = localStorage.getItem('TODO');
-if (data) {
+if (data) { // si data existe, con parse transforma el json, al lenguaje que lee la web
     LIST = JSON.parse(data);
-    id = LIST.length; // Ajustar el ID al número de tareas existentes
+    id = LIST.length; // Ajustar el ID al número de tareas existentes, lenght nos permite ver cuantos elementos tiene el array
     LIST.forEach((tarea) => agregarTarea(tarea.nombre, tarea.id, tarea.realizado, tarea.eliminado));
 }
 
