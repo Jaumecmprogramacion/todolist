@@ -25,3 +25,13 @@ enter.addEventListener('click',()=>{
 
 })
 
+document.addEventListener('keyup', function(event) {
+    if (event.key === 'Enter') {
+        const tarea = input.value;
+        if (tarea) {
+            agregarTarea(tarea);
+        }
+        input.value = '';
+    }
+}); // Cierre de la función correctamente, debe is con ; o no funciona
+
